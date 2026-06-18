@@ -1,0 +1,6 @@
+versions/
+scan.pdf
+*_tmp.pdf
+*.pyc
+__pycache__/
+.claude/

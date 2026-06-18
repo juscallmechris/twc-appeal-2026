@@ -1,0 +1,193 @@
+CATEGORY,FIELD,VALUE,NOTES
+PERSONAL IDENTITY,Full Legal Name,Christopher Fowler,
+PERSONAL IDENTITY,First Name,Christopher,
+PERSONAL IDENTITY,Middle Name,,FILL IN
+PERSONAL IDENTITY,Last Name,Fowler,
+PERSONAL IDENTITY,Suffix (Jr/Sr/II),,If applicable
+PERSONAL IDENTITY,Preferred Name / Nickname,,FILL IN if different from legal name
+PERSONAL IDENTITY,Date of Birth,,FILL IN (MM/DD/YYYY)
+PERSONAL IDENTITY,Age,,FILL IN
+PERSONAL IDENTITY,Social Security Number,,ENTER YOURSELF — never share in a document
+PERSONAL IDENTITY,Gender,,FILL IN (Male/Female/Non-binary/Prefer not to say)
+PERSONAL IDENTITY,Race/Ethnicity,,FILL IN (optional — some employment apps ask)
+PERSONAL IDENTITY,Driver's License Number,,FILL IN
+PERSONAL IDENTITY,Driver's License State,Texas,
+PERSONAL IDENTITY,Driver's License Expiration Date,,FILL IN
+PERSONAL IDENTITY,U.S. Citizen,Yes,FILL IN (Yes/No)
+PERSONAL IDENTITY,Immigration Status,,FILL IN if not U.S. citizen (Green Card/Visa type)
+PERSONAL IDENTITY,Work Authorization,,FILL IN (Authorized to work in U.S.? Yes/No)
+PERSONAL IDENTITY,Marital Status,,FILL IN (Single/Married/Divorced/Separated/Widowed)
+PERSONAL IDENTITY,Number of Dependents,,FILL IN
+CONTACT,Primary Email,houtx3@gmail.com,
+CONTACT,Secondary Email,juscallmechris@gmail.com,
+CONTACT,Mobile Phone,832-783-0800,
+CONTACT,Home Phone,,FILL IN
+CONTACT,Work Phone,,FILL IN
+CONTACT,LinkedIn URL,,FILL IN
+CURRENT ADDRESS,Street Address,,FILL IN
+CURRENT ADDRESS,Unit / Apt,,FILL IN
+CURRENT ADDRESS,City,Houston,
+CURRENT ADDRESS,State,TX,
+CURRENT ADDRESS,ZIP Code,,FILL IN
+CURRENT ADDRESS,County,Harris,
+CURRENT ADDRESS,Move-In Date,,FILL IN (MM/YYYY)
+CURRENT ADDRESS,Years at Address,,FILL IN
+CURRENT ADDRESS,Months at Address,,FILL IN
+CURRENT ADDRESS,Own or Rent,,FILL IN (Own/Rent/Living with family)
+CURRENT ADDRESS,Monthly Rent/Mortgage Payment,,FILL IN
+PREVIOUS ADDRESS 1,Street Address,,FILL IN if less than 2 years at current address
+PREVIOUS ADDRESS 1,Unit / Apt,,FILL IN
+PREVIOUS ADDRESS 1,City,,FILL IN
+PREVIOUS ADDRESS 1,State,,FILL IN
+PREVIOUS ADDRESS 1,ZIP Code,,FILL IN
+PREVIOUS ADDRESS 1,Move-In Date,,FILL IN
+PREVIOUS ADDRESS 1,Move-Out Date,,FILL IN
+PREVIOUS ADDRESS 1,Years at Address,,FILL IN
+PREVIOUS ADDRESS 1,Own or Rent,,FILL IN
+PREVIOUS ADDRESS 1,Monthly Rent/Mortgage,,FILL IN
+PREVIOUS ADDRESS 2,Street Address,,FILL IN if needed for 5-year history
+PREVIOUS ADDRESS 2,Unit / Apt,,FILL IN
+PREVIOUS ADDRESS 2,City,,FILL IN
+PREVIOUS ADDRESS 2,State,,FILL IN
+PREVIOUS ADDRESS 2,ZIP Code,,FILL IN
+PREVIOUS ADDRESS 2,Move-In Date,,FILL IN
+PREVIOUS ADDRESS 2,Move-Out Date,,FILL IN
+CURRENT EMPLOYMENT,Employment Status,,FILL IN (Full-Time/Part-Time/Self-Employed/Unemployed/Retired)
+CURRENT EMPLOYMENT,Employer Name,,FILL IN
+CURRENT EMPLOYMENT,Employer Address,,FILL IN
+CURRENT EMPLOYMENT,Employer City/State/ZIP,,FILL IN
+CURRENT EMPLOYMENT,Employer Phone,,FILL IN
+CURRENT EMPLOYMENT,Supervisor Name,,FILL IN
+CURRENT EMPLOYMENT,Supervisor Phone,,FILL IN
+CURRENT EMPLOYMENT,Supervisor Email,,FILL IN
+CURRENT EMPLOYMENT,Job Title,,FILL IN
+CURRENT EMPLOYMENT,Department,,FILL IN
+CURRENT EMPLOYMENT,Start Date,,FILL IN (MM/DD/YYYY)
+CURRENT EMPLOYMENT,Years at Employer,,FILL IN
+CURRENT EMPLOYMENT,Months at Employer,,FILL IN
+CURRENT EMPLOYMENT,Pay Type,,FILL IN (Hourly/Salary)
+CURRENT EMPLOYMENT,Hourly Rate,,FILL IN if hourly
+CURRENT EMPLOYMENT,Annual Gross Income,,FILL IN
+CURRENT EMPLOYMENT,Monthly Gross Income,,FILL IN
+CURRENT EMPLOYMENT,Pay Frequency,,FILL IN (Weekly/Bi-weekly/Semi-monthly/Monthly)
+CURRENT EMPLOYMENT,May We Contact Employer?,Yes,FILL IN (Yes/No)
+PREVIOUS EMPLOYMENT 1,Employer Name,,FILL IN
+PREVIOUS EMPLOYMENT 1,Employer Address,,FILL IN
+PREVIOUS EMPLOYMENT 1,Employer Phone,,FILL IN
+PREVIOUS EMPLOYMENT 1,Supervisor Name,,FILL IN
+PREVIOUS EMPLOYMENT 1,Supervisor Phone,,FILL IN
+PREVIOUS EMPLOYMENT 1,Job Title,,FILL IN
+PREVIOUS EMPLOYMENT 1,Start Date,,FILL IN
+PREVIOUS EMPLOYMENT 1,End Date,,FILL IN
+PREVIOUS EMPLOYMENT 1,Reason for Leaving,,FILL IN
+PREVIOUS EMPLOYMENT 1,Annual Income,,FILL IN
+PREVIOUS EMPLOYMENT 1,May We Contact?,Yes,FILL IN (Yes/No)
+PREVIOUS EMPLOYMENT 2,Employer Name,,FILL IN
+PREVIOUS EMPLOYMENT 2,Employer Address,,FILL IN
+PREVIOUS EMPLOYMENT 2,Employer Phone,,FILL IN
+PREVIOUS EMPLOYMENT 2,Supervisor Name,,FILL IN
+PREVIOUS EMPLOYMENT 2,Supervisor Phone,,FILL IN
+PREVIOUS EMPLOYMENT 2,Job Title,,FILL IN
+PREVIOUS EMPLOYMENT 2,Start Date,,FILL IN
+PREVIOUS EMPLOYMENT 2,End Date,,FILL IN
+PREVIOUS EMPLOYMENT 2,Reason for Leaving,,FILL IN
+PREVIOUS EMPLOYMENT 2,Annual Income,,FILL IN
+PREVIOUS EMPLOYMENT 2,May We Contact?,Yes,FILL IN (Yes/No)
+PREVIOUS EMPLOYMENT 3,Employer Name,,FILL IN
+PREVIOUS EMPLOYMENT 3,Job Title,,FILL IN
+PREVIOUS EMPLOYMENT 3,Start Date,,FILL IN
+PREVIOUS EMPLOYMENT 3,End Date,,FILL IN
+PREVIOUS EMPLOYMENT 3,Reason for Leaving,,FILL IN
+EDUCATION,Highest Education Level,,FILL IN (High School/GED/Some College/Associate/Bachelor's/Master's/Doctorate)
+EDUCATION,High School Name,,FILL IN
+EDUCATION,High School City/State,,FILL IN
+EDUCATION,High School Graduation Year,,FILL IN
+EDUCATION,College/University Name,,FILL IN
+EDUCATION,College City/State,,FILL IN
+EDUCATION,Degree Type,,FILL IN (Associate/Bachelor's/Master's/etc.)
+EDUCATION,Major/Field of Study,,FILL IN
+EDUCATION,Graduation Year,,FILL IN
+EDUCATION,GPA,,FILL IN (optional)
+EDUCATION,Additional Certifications,,FILL IN
+EDUCATION,Professional Licenses,,FILL IN
+SKILLS & QUALIFICATIONS,Skills,,FILL IN (comma-separated list)
+SKILLS & QUALIFICATIONS,Languages Spoken,,FILL IN (e.g. English/Spanish/French)
+SKILLS & QUALIFICATIONS,Computer Skills,,FILL IN
+SKILLS & QUALIFICATIONS,Typing Speed (WPM),,FILL IN if applicable
+SKILLS & QUALIFICATIONS,CDL or Special License,,FILL IN if applicable
+EMPLOYMENT APP DETAILS,Available Start Date,,FILL IN
+EMPLOYMENT APP DETAILS,Desired Salary/Hourly Rate,,FILL IN
+EMPLOYMENT APP DETAILS,Available for Overtime?,Yes,FILL IN (Yes/No)
+EMPLOYMENT APP DETAILS,Available for Shift Work?,Yes,FILL IN (Yes/No)
+EMPLOYMENT APP DETAILS,Available for Travel?,Yes,FILL IN (Yes/No)
+EMPLOYMENT APP DETAILS,Available for Relocation?,No,FILL IN (Yes/No)
+EMPLOYMENT APP DETAILS,Schedule Availability,,FILL IN (Full-time/Part-time/Flexible/Weekends)
+EMPLOYMENT APP DETAILS,Ever Been Terminated?,No,FILL IN (Yes/No — if yes add explanation)
+EMPLOYMENT APP DETAILS,Felony Conviction?,No,FILL IN (Yes/No — if yes add explanation)
+MILITARY / VETERAN,Veteran Status,,FILL IN (Yes/No)
+MILITARY / VETERAN,Branch of Service,,FILL IN if applicable
+MILITARY / VETERAN,Rank at Discharge,,FILL IN if applicable
+MILITARY / VETERAN,Service Dates,,FILL IN if applicable
+MILITARY / VETERAN,Discharge Type,,FILL IN if applicable (Honorable/General/etc.)
+FINANCIAL,Monthly Rent or Mortgage,,FILL IN
+FINANCIAL,Additional Monthly Income,,FILL IN (if any)
+FINANCIAL,Additional Income Source,,FILL IN
+FINANCIAL,Existing Monthly Car Payment,,FILL IN
+FINANCIAL,Monthly Credit Card Payments,,FILL IN
+FINANCIAL,Student Loan Monthly Payment,,FILL IN
+FINANCIAL,Other Monthly Debt,,FILL IN
+FINANCIAL,Total Monthly Obligations,,FILL IN (sum of above)
+FINANCIAL,Checking Account Bank,,FILL IN
+FINANCIAL,Checking Account Number,,ENTER YOURSELF — never share in a document
+FINANCIAL,Routing Number,,ENTER YOURSELF — never share in a document
+FINANCIAL,Savings Account Bank,,FILL IN
+FINANCIAL,Estimated Credit Score Range,,FILL IN (Excellent 750+/Good 700-749/Fair 650-699/Poor below 650)
+FINANCIAL,Bankruptcy History,,FILL IN (Never/Chapter 7/Chapter 13 — year if applicable)
+FINANCIAL,Foreclosure History,,FILL IN (Yes/No — year if applicable)
+FINANCIAL,Repossession History,,FILL IN (Yes/No — year if applicable)
+INSURANCE,Auto Insurance Provider,,FILL IN
+INSURANCE,Auto Insurance Policy Number,,FILL IN
+INSURANCE,Auto Insurance Agent Phone,,FILL IN
+INSURANCE,Health Insurance Provider,,FILL IN
+INSURANCE,Health Insurance Policy Number,,FILL IN
+VEHICLE (FOR AUTO APPS),Year,,FILL IN
+VEHICLE (FOR AUTO APPS),Make,,FILL IN
+VEHICLE (FOR AUTO APPS),Model,,FILL IN
+VEHICLE (FOR AUTO APPS),Trim,,FILL IN
+VEHICLE (FOR AUTO APPS),VIN,,FILL IN
+VEHICLE (FOR AUTO APPS),Mileage,,FILL IN
+VEHICLE (FOR AUTO APPS),Color,,FILL IN
+VEHICLE (FOR AUTO APPS),Purchase Price,,FILL IN
+VEHICLE (FOR AUTO APPS),Down Payment,,FILL IN
+VEHICLE (FOR AUTO APPS),Loan Amount,,FILL IN
+VEHICLE (FOR AUTO APPS),Desired Loan Term,,FILL IN (e.g. 36/48/60/72 months)
+VEHICLE (FOR AUTO APPS),Trade-In Vehicle,,FILL IN if applicable
+VEHICLE (FOR AUTO APPS),Trade-In Value,,FILL IN if applicable
+VEHICLE (FOR AUTO APPS),Trade-In Payoff Amount,,FILL IN if applicable
+HOUSING HISTORY,Current Landlord Name,,FILL IN
+HOUSING HISTORY,Current Landlord Phone,,FILL IN
+HOUSING HISTORY,Current Landlord Email,,FILL IN
+HOUSING HISTORY,Previous Landlord Name,,FILL IN
+HOUSING HISTORY,Previous Landlord Phone,,FILL IN
+REFERENCES,Reference 1 Name,,FILL IN
+REFERENCES,Reference 1 Phone,,FILL IN
+REFERENCES,Reference 1 Relationship,,FILL IN (Friend/Coworker/Former Supervisor/etc.)
+REFERENCES,Reference 1 Email,,FILL IN
+REFERENCES,Reference 1 Years Known,,FILL IN
+REFERENCES,Reference 2 Name,,FILL IN
+REFERENCES,Reference 2 Phone,,FILL IN
+REFERENCES,Reference 2 Relationship,,FILL IN
+REFERENCES,Reference 2 Email,,FILL IN
+REFERENCES,Reference 2 Years Known,,FILL IN
+REFERENCES,Reference 3 Name,,FILL IN
+REFERENCES,Reference 3 Phone,,FILL IN
+REFERENCES,Reference 3 Relationship,,FILL IN
+REFERENCES,Reference 3 Email,,FILL IN
+REFERENCES,Reference 3 Years Known,,FILL IN
+EMERGENCY CONTACT,Emergency Contact 1 Name,,FILL IN
+EMERGENCY CONTACT,Emergency Contact 1 Phone,,FILL IN
+EMERGENCY CONTACT,Emergency Contact 1 Relationship,,FILL IN
+EMERGENCY CONTACT,Emergency Contact 1 Address,,FILL IN
+EMERGENCY CONTACT,Emergency Contact 2 Name,,FILL IN
+EMERGENCY CONTACT,Emergency Contact 2 Phone,,FILL IN
+EMERGENCY CONTACT,Emergency Contact 2 Relationship,,FILL IN

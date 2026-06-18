@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TWC Appeal 2026 — Christopher Fowler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0c0b0a;--bg2:#111009;--surf:#181612;--surf2:#201e17;--surf3:#272419;
+  --border:#2c2920;--border2:#3d3928;
+  --gold:#d4a853;--gold-lt:#e8c07a;--gold-dim:#7a5e28;
+  --rust:#c45b3a;--sky:#4a8fc4;--teal:#3a9e82;
+  --text:#e4ddd0;--text-dim:#8a7f6e;--text-mute:#4a4438;
+}
+html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:'Lora',serif;}
+body::after{
+  content:'';position:fixed;inset:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;
+}
+/* Top bar */
+.top-bar{
+  position:sticky;top:0;z-index:200;
+  background:rgba(12,11,10,.95);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding:0 1.5rem;height:54px;
+  display:flex;align-items:center;gap:1rem;
+}
+.wordmark{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:-.02em;color:var(--gold);}
+.wordmark em{color:var(--text-dim);font-style:normal;font-weight:600}
+.case-ref{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--text-mute);}
+
+/* Layout */
+.page{max-width:860px;margin:0 auto;padding:2rem 1.25rem 4rem;}
+
+/* Case header */
+.case-header{
+  background:linear-gradient(135deg,rgba(212,168,83,.07),rgba(74,143,196,.04));
+  border:1px solid var(--border2);border-radius:8px;
+  padding:1.5rem;margin-bottom:1.75rem;
+}
+.case-title{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--gold);letter-spacing:-.02em;margin-bottom:.5rem;}
+.case-meta{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-bottom:1rem;}
+.meta-item{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--text-dim);}
+.meta-item strong{color:var(--text);}
+.case-argument{
+  font-size:.88rem;line-height:1.6;color:var(--text-dim);
+  border-left:3px solid var(--gold-dim);padding-left:1rem;
+}
+.case-argument strong{color:var(--gold);}
+
+/* Deadline cards */
+.deadlines{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:1.75rem;}
+.deadline-card{border-radius:7px;padding:1rem 1.25rem;border:1px solid;}
+.deadline-card.urgent{
+  background:rgba(196,91,58,.08);border-color:rgba(196,91,58,.35);
+}
+.deadline-card.ok{
+  background:rgba(58,158,130,.06);border-color:rgba(58,158,130,.25);
+}
+.deadline-card.neutral{
+  background:rgba(74,143,196,.06);border-color:rgba(74,143,196,.2);
+}
+.dl-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;}
+.deadline-card.urgent .dl-label{color:var(--rust);}
+.deadline-card.ok .dl-label{color:var(--teal);}
+.deadline-card.neutral .dl-label{color:var(--sky);}
+.dl-title{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:.25rem;}
+.dl-date{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--text-dim);margin-bottom:.2rem;}
+.dl-remaining{font-family:'JetBrains Mono',monospace;font-size:.68rem;}
+.deadline-card.urgent .dl-remaining{color:var(--rust);}
+.deadline-card.ok .dl-remaining{color:var(--teal);}
+.deadline-card.neutral .dl-remaining{color:var(--sky);}
+
+/* Sections */
+.section{margin-bottom:2rem;}
+.section-label{
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--text-mute);
+  margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);
+}
+/* Document rows */
+.doc-list{display:flex;flex-direction:column;gap:.5rem;}
+.doc-row{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--surf);border:1px solid var(--border);border-radius:6px;
+  padding:.85rem 1rem;cursor:pointer;transition:background .15s,border-color .15s;
+  text-decoration:none;color:inherit;
+}
+.doc-row:hover{background:var(--surf2);border-color:var(--border2);}
+.doc-icon{
+  width:32px;height:32px;border-radius:5px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-family:'JetBrains Mono',monospace;font-weight:700;
+}
+.doc-icon.html{background:rgba(212,168,83,.12);color:var(--gold);}
+.doc-icon.pdf{background:rgba(196,91,58,.12);color:var(--rust);}
+.doc-icon.key{background:rgba(58,158,130,.12);color:var(--teal);}
+.doc-body{flex:1;min-width:0;}
+.doc-title{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:.15rem;}
+.doc-desc{font-size:.78rem;color:var(--text-dim);line-height:1.45;}
+.doc-tag{
+  display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.56rem;
+  text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;border-radius:3px;
+  margin-right:4px;
+}
+.tag-key{background:rgba(58,158,130,.15);color:var(--teal);border:1px solid rgba(58,158,130,.3);}
+.tag-draft{background:rgba(212,168,83,.12);color:var(--gold);border:1px solid rgba(212,168,83,.25);}
+.tag-letter{background:rgba(74,143,196,.1);color:var(--sky);border:1px solid rgba(74,143,196,.25);}
+.tag-ref{background:rgba(138,127,110,.1);color:var(--text-dim);border:1px solid var(--border2);}
+.doc-arrow{color:var(--text-mute);font-size:.9rem;flex-shrink:0;}
+
+/* Points breakdown */
+.points-box{
+  background:var(--surf);border:1px solid var(--border2);border-radius:7px;
+  padding:1.1rem 1.25rem;margin-bottom:1.75rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:.75rem 2rem;
+}
+.pt-group{}
+.pt-label{font-family:'JetBrains Mono',monospace;font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-mute);margin-bottom:.3rem;}
+.pt-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.15rem;}
+.pt-name{font-size:.82rem;color:var(--text-dim);}
+.pt-val{font-family:'JetBrains Mono',monospace;font-size:.82rem;}
+.pt-val.protected{color:var(--rust);text-decoration:line-through;}
+.pt-val.ok{color:var(--teal);}
+.pt-val.total{color:var(--gold);font-weight:700;}
+.pt-total-row{border-top:1px solid var(--border);margin-top:.4rem;padding-top:.4rem;}
+@media(max-width:480px){
+  .points-box{grid-template-columns:1fr;}
+  .deadlines{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="wordmark">TWC<em>appeal</em></div>
+  <div class="case-ref">Appeal #12855351 &nbsp;&middot;&nbsp; Decision No. 4061814-1-1</div>
+</div>
+
+<div class="page">
+
+  <!-- Case Header -->
+  <div class="case-header">
+    <div class="case-title">Christopher Fowler v. Centene Corporation</div>
+    <div class="case-meta">
+      <div class="meta-item"><strong>Claimant:</strong> Christopher Fowler</div>
+      <div class="meta-item"><strong>Termination:</strong> November 20, 2025</div>
+      <div class="meta-item"><strong>Appeal Filed:</strong> June 2, 2026</div>
+      <div class="meta-item"><strong>Tribunal Decision:</strong> May 19, 2026 — No. 4061814-1-1</div>
+    </div>
+    <div class="case-argument">
+      <strong>Core Argument:</strong> Terminated under attendance policy using 8.5 points — but <strong>1.5 of those points (Nov 13 + Nov 18, 2025)</strong> fall within an approved FMLA window (Oct 24, 2025 – Jan 1, 2026). Removing protected absences brings total to <strong>7.0 pts</strong>, below the 8-pt termination threshold. Termination was therefore unlawful.
+    </div>
+  </div>
+
+  <!-- Points Breakdown -->
+  <div class="points-box">
+    <div class="pt-group">
+      <div class="pt-label">Employer's Count</div>
+      <div class="pt-row"><span class="pt-name">Total points cited</span><span class="pt-val total">8.5</span></div>
+      <div class="pt-row"><span class="pt-name">Nov 13 absence (FMLA)</span><span class="pt-val protected">0.5</span></div>
+      <div class="pt-row"><span class="pt-name">Nov 18 absence (FMLA)</span><span class="pt-val protected">1.0</span></div>
+    </div>
+    <div class="pt-group">
+      <div class="pt-label">Corrected Count</div>
+      <div class="pt-row"><span class="pt-name">Points without FMLA dates</span><span class="pt-val ok">7.0</span></div>
+      <div class="pt-row pt-total-row"><span class="pt-name">Termination threshold</span><span class="pt-val total">8.0</span></div>
+      <div class="pt-row"><span class="pt-name">Outcome</span><span class="pt-val ok">Below threshold — should not have been fired</span></div>
+    </div>
+  </div>
+
+  <!-- Deadlines & Status — Updated June 17, 2026 -->
+  <div class="section-label">Active Proceedings &amp; Deadlines</div>
+  <div class="deadlines">
+    <div class="deadline-card ok">
+      <div class="dl-label">✓ Active</div>
+      <div class="dl-title">Commission Appeal #12855351</div>
+      <div class="dl-date">Filed June 2, 2026</div>
+      <div class="dl-remaining">Pending — supplemental statement faxed 06/17/2026</div>
+    </div>
+    <div class="deadline-card ok">
+      <div class="dl-label">✓ Sent</div>
+      <div class="dl-title">Overpayment Deferral Request</div>
+      <div class="dl-date">Account 13-379936-2 — $8,358.00</div>
+      <div class="dl-remaining">Faxed 06/17/2026 — follow up to confirm deferral</div>
+    </div>
+    <div class="deadline-card urgent">
+      <div class="dl-label">⚠ Upcoming</div>
+      <div class="dl-title">EEOC Charge Filing</div>
+      <div class="dl-date">~September 16, 2026</div>
+      <div class="dl-remaining">~91 days remaining</div>
+    </div>
+    <div class="deadline-card neutral">
+      <div class="dl-label">DOL / WHD — General</div>
+      <div class="dl-title">FMLA Complaint (2-year statute)</div>
+      <div class="dl-date">November 20, 2027</div>
+      <div class="dl-remaining">~521 days remaining</div>
+    </div>
+    <div class="deadline-card neutral">
+      <div class="dl-label">DOL / WHD — Willful</div>
+      <div class="dl-title">FMLA Willful Violation (3-year statute)</div>
+      <div class="dl-date">November 20, 2028</div>
+      <div class="dl-remaining">~887 days remaining</div>
+    </div>
+  </div>
+
+  <!-- Primary Document -->
+  <div class="section">
+    <div class="section-label">Primary Filing</div>
+    <div class="doc-list">
+      <a class="doc-row" href="00_Written_Statement_Christopher_Fowler.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Written Statement — Christopher Fowler</div>
+          <div class="doc-desc"><span class="doc-tag tag-draft">Draft</span> Full written statement for the TWC hearing. Print-ready. Review before submitting.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="TODO.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Action To-Do List</div>
+          <div class="doc-desc"><span class="doc-tag tag-draft">Active</span> 10-item clickable checklist — next steps for submitting the appeal packet, confirming receipt, attorney consultation.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Legal Action Guide.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Legal Action Guide</div>
+          <div class="doc-desc"><span class="doc-tag tag-ref">Reference</span> Step-by-step guide — EEOC, DOL/WHD, attorney options, deadlines, and filing instructions.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Letters -->
+  <div class="section">
+    <div class="section-label">Letters &amp; Correspondence</div>
+    <div class="doc-list">
+      <a class="doc-row" href="Letters/Letter_1_Attorney_Inquiry.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Letter 1 — Attorney Inquiry</div>
+          <div class="doc-desc"><span class="doc-tag tag-letter">Letter</span><span class="doc-tag tag-draft">Draft</span> Outreach letter to employment attorneys seeking representation.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Letters/Letter_2_DOL_WHD_Complaint.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Letter 2 — DOL / WHD Complaint</div>
+          <div class="doc-desc"><span class="doc-tag tag-letter">Letter</span><span class="doc-tag tag-draft">Draft</span> Formal complaint to the Department of Labor, Wage and Hour Division regarding FMLA interference.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Letters/Letter_3_EEOC_Charge_Summary.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Letter 3 — EEOC Charge Summary</div>
+          <div class="doc-desc"><span class="doc-tag tag-letter">Letter</span><span class="doc-tag tag-draft">Draft</span> Summary of discrimination charge for EEOC filing. Deadline: ~September 16, 2026.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Letters/Letter_4_Overpayment_Deferral_Request.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Letter 4 — Overpayment Deferral Request</div>
+          <div class="doc-desc"><span class="doc-tag tag-letter">Letter</span> Requests TWC defer $8,358 collection on Account 13-379936-2 pending Commission Appeal #12855351. Send immediately — due date has passed.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Letters/Letter_5_Supplemental_NonAppearance_Statement.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Letter 5 — Supplemental Statement: Good Cause for Non-Appearance</div>
+          <div class="doc-desc"><span class="doc-tag tag-letter">Letter</span> Explains why claimant did not appear at the May 15, 2026 hearing — hearing notice never received (paper-only, never delivered). Cites Docs 10 &amp; 11 as proof. Submit to Commission Appeals (fax 512-475-2044) to supplement pending appeal #12855351.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Letters/Attorney_Contacts_and_Referral.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">Attorney Contacts &amp; Referral List</div>
+          <div class="doc-desc"><span class="doc-tag tag-ref">Reference</span> Employment attorneys and referral resources for this case.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Supporting Documents -->
+  <div class="section">
+    <div class="section-label">Supporting Documents</div>
+    <div class="doc-list">
+      <a class="doc-row" href="Supporting Documents/01_FMLA_Certification_Leave18087586.pdf" target="_blank">
+        <div class="doc-icon key">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">01 — FMLA Certification</div>
+          <div class="doc-desc"><span class="doc-tag tag-key">Key</span> Leave ID 18087586 — Centene Corp. Approved leave dates Oct 24, 2025 – Jan 1, 2026.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/02_Lincoln_Financial_FMLA_Acknowledgement_Nov4_2025.pdf" target="_blank">
+        <div class="doc-icon key">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">02 — Lincoln Financial FMLA Acknowledgement</div>
+          <div class="doc-desc"><span class="doc-tag tag-key">Key</span> Official acknowledgement (Nov 4, 2025) — confirms FMLA approved, Oct 24, 2025 – Jan 1, 2026.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/03_Supervisor_Occurrence_Update_Email_Nov20_2025.pdf" target="_blank">
+        <div class="doc-icon key">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">03 — Supervisor Occurrence Update Email</div>
+          <div class="doc-desc"><span class="doc-tag tag-key">Key</span> Supervisor email (Nov 20, 2025) listing 8.5 total points — explicitly shows Nov 13 (0.5 pt) and Nov 18 (1.0 pt) within FMLA window.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/04_Lincoln_Financial_FMLA_Denial_Oct22_2025.pdf" target="_blank">
+        <div class="doc-icon pdf">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">04 — Lincoln Financial FMLA Denial</div>
+          <div class="doc-desc"><span class="doc-tag tag-ref">Context</span> Initial denial letter (Oct 22, 2025) — later overturned by the approved certification.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/05_PIP_Record_Oct6_2025.pdf" target="_blank">
+        <div class="doc-icon pdf">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">05 — PIP Record</div>
+          <div class="doc-desc"><span class="doc-tag tag-ref">Context</span> Performance Improvement Plan record (Oct 6, 2025) — establishes attendance point timeline.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/06_TWC_Appeal_Confirmation_12855351.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">06 — TWC Appeal Confirmation</div>
+          <div class="doc-desc"><span class="doc-tag tag-ref">Filed</span> Appeal confirmation #12855351, submitted June 2, 2026.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/07_Text_Message_Evidence_Excerpts.html">
+        <div class="doc-icon html">HTM</div>
+        <div class="doc-body">
+          <div class="doc-title">07 — Text Message Evidence Excerpts</div>
+          <div class="doc-desc"><span class="doc-tag tag-key">Evidence</span> Relevant text message exchanges supporting the timeline of events.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/08_MyKelsey_PCP_FMLA_Request_Oct2025.pdf" target="_blank">
+        <div class="doc-icon pdf">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">08 — MyKelsey PCP FMLA Request</div>
+          <div class="doc-desc"><span class="doc-tag tag-ref">Medical</span> Primary care physician FMLA request submitted via MyKelsey portal, October 2025.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/09_Tribunal_Decision_and_Overpayment_Statement.pdf" target="_blank">
+        <div class="doc-icon key">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">09 — Tribunal Decision &amp; Overpayment Statement</div>
+          <div class="doc-desc"><span class="doc-tag tag-key">Key</span> TWC Appeal Tribunal Decision No. 4061814-1-1 (May 19, 2026) — decision being appealed. Also includes Statement of Overpaid Benefits (May 21, 2026), $8,358.00, Account 13-379936-2. Pages reorganized and cleaned from scan.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/10_TWC_Appeal_Notice_Feb26_2026.pdf" target="_blank">
+        <div class="doc-icon key">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">10 — TWC Appeal Notice (Feb 26, 2026)</div>
+          <div class="doc-desc"><span class="doc-tag tag-key">Key</span> TWC Appeals Tribunal notice (Feb 26, 2026) — confirms TWC had correct address (Apt 1053) on file; states hearing notice would be mailed. Claimant received this but never received the subsequent Notice of Hearing.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+      <a class="doc-row" href="Supporting Documents/11_TWC_Paper_Documents_Mailed_Apr24_2026.pdf" target="_blank">
+        <div class="doc-icon key">PDF</div>
+        <div class="doc-body">
+          <div class="doc-title">11 — TWC Paper Documents Mailed (Apr 24, 2026)</div>
+          <div class="doc-desc"><span class="doc-tag tag-key">Key</span> TWC's own system confirms hearing notice was paper-only ("could not be sent through electronic correspondence"). No hearing notice in online inbox (55 documents). Online notification not opened until Jun 5 — 3 weeks after the May 15 hearing.</div>
+        </div>
+        <div class="doc-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
