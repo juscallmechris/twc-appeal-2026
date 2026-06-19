@@ -15,7 +15,8 @@
   --rust:#c45b3a;--sky:#4a8fc4;--teal:#3a9e82;
   --text:#e4ddd0;--text-dim:#8a7f6e;--text-mute:#4a4438;
 }
-html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:'Lora',serif;}
+html{scroll-behavior:smooth;}
+body{min-height:100vh;background:var(--bg);color:var(--text);font-family:'Lora',serif;}
 body::after{
   content:'';position:fixed;inset:0;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.035'/%3E%3C/svg%3E");
@@ -128,23 +129,73 @@ body::after{
 .pt-val.ok{color:var(--teal);}
 .pt-val.total{color:var(--gold);font-weight:700;}
 .pt-total-row{border-top:1px solid var(--border);margin-top:.4rem;padding-top:.4rem;}
+/* Jump nav */
+.jump-nav{
+  position:sticky;top:54px;z-index:190;
+  background:rgba(17,16,9,.95);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding:0 1rem;
+  display:flex;align-items:center;gap:0;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.jump-nav::-webkit-scrollbar{display:none;}
+.jump-nav a{
+  font-family:'JetBrains Mono',monospace;font-size:.62rem;
+  text-transform:uppercase;letter-spacing:.06em;
+  color:var(--text-mute);text-decoration:none;
+  padding:.65rem .75rem;white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:color .15s,border-color .15s;
+}
+.jump-nav a:hover,.jump-nav a:focus{color:var(--gold);border-bottom-color:var(--gold-dim);}
+.jump-nav .nav-badge{
+  display:inline-block;background:var(--surf3);color:var(--text-dim);
+  font-size:.52rem;padding:1px 5px;border-radius:3px;margin-left:4px;
+  vertical-align:middle;
+}
+/* Back to top */
+.back-top{
+  position:fixed;bottom:24px;right:24px;z-index:300;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--border2);
+  background:rgba(24,22,18,.92);backdrop-filter:blur(10px);
+  color:var(--gold);font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .25s;
+  transform:translateY(10px);
+  box-shadow:0 4px 16px rgba(0,0,0,.4);
+}
+.back-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+/* Section anchors — offset for sticky headers */
+.section[id]{scroll-margin-top:110px;}
+.deadlines-wrap{scroll-margin-top:110px;}
 @media(max-width:480px){
   .points-box{grid-template-columns:1fr;}
   .deadlines{grid-template-columns:1fr;}
+  .jump-nav a{padding:.6rem .55rem;font-size:.56rem;}
 }
 </style>
 </head>
 <body>
 
-<div class="top-bar">
+<div class="top-bar" id="top">
   <div class="wordmark">TWC<em>appeal</em></div>
   <div class="case-ref">Appeal #12855351 &nbsp;&middot;&nbsp; Decision No. 4061814-1-1</div>
 </div>
 
+<nav class="jump-nav">
+  <a href="#case">Case</a>
+  <a href="#status">Status<span class="nav-badge">6</span></a>
+  <a href="#filing">Filing<span class="nav-badge">3</span></a>
+  <a href="#letters">Letters<span class="nav-badge">5</span></a>
+  <a href="#docs">Documents<span class="nav-badge">11</span></a>
+</nav>
+
 <div class="page">
 
   <!-- Case Header -->
-  <div class="case-header">
+  <div class="case-header" id="case">
     <div class="case-title">Christopher Fowler v. Centene Corporation</div>
     <div class="case-meta">
       <div class="meta-item"><strong>Claimant:</strong> Christopher Fowler</div>
@@ -174,8 +225,8 @@ body::after{
   </div>
 
   <!-- Deadlines & Status — Updated June 19, 2026 -->
-  <div class="section-label">Active Proceedings &amp; Deadlines</div>
-  <div class="deadlines">
+  <div class="section-label" id="status">Active Proceedings &amp; Deadlines</div>
+  <div class="deadlines deadlines-wrap">
     <div class="deadline-card urgent">
       <div class="dl-label">⚠ Today</div>
       <div class="dl-title">Attorney Consultation</div>
@@ -215,7 +266,7 @@ body::after{
   </div>
 
   <!-- Primary Document -->
-  <div class="section">
+  <div class="section" id="filing">
     <div class="section-label">Primary Filing</div>
     <div class="doc-list">
       <a class="doc-row" href="00_Written_Statement_Christopher_Fowler.html">
@@ -246,7 +297,7 @@ body::after{
   </div>
 
   <!-- Letters -->
-  <div class="section">
+  <div class="section" id="letters">
     <div class="section-label">Letters &amp; Correspondence</div>
     <div class="doc-list">
       <a class="doc-row" href="Letters/Letter_1_Attorney_Inquiry.html">
@@ -301,7 +352,7 @@ body::after{
   </div>
 
   <!-- Supporting Documents -->
-  <div class="section">
+  <div class="section" id="docs">
     <div class="section-label">Supporting Documents</div>
     <div class="doc-list">
       <a class="doc-row" href="Supporting Documents/01_FMLA_Certification_Leave18087586.pdf" target="_blank">
@@ -396,5 +447,31 @@ body::after{
   </div>
 
 </div>
+
+<a href="#top" class="back-top" id="backTop" aria-label="Back to top">&#8593;</a>
+
+<script>
+(function(){
+  var btn=document.getElementById('backTop');
+  var nav=document.querySelector('.jump-nav');
+  var links=nav.querySelectorAll('a');
+  var sections=[];
+  links.forEach(function(a){
+    var id=a.getAttribute('href').slice(1);
+    var el=document.getElementById(id);
+    if(el) sections.push({link:a,el:el});
+  });
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('visible',window.scrollY>400);
+    var scrollY=window.scrollY+130;
+    var current=null;
+    sections.forEach(function(s){
+      if(s.el.offsetTop<=scrollY) current=s.link;
+    });
+    links.forEach(function(a){a.style.color='';a.style.borderBottomColor='';});
+    if(current){current.style.color='var(--gold)';current.style.borderBottomColor='var(--gold-dim)';}
+  });
+})();
+</script>
 </body>
 </html>
